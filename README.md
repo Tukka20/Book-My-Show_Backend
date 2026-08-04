@@ -148,6 +148,19 @@ If payment is not completed within **5 minutes**, the booking is cancelled autom
 
 ----
 
+### Configure MySQL
+
+Update **application.properties**
+
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/bookmyshow
+spring.datasource.username=your username
+spring.datasource.password=your_password
+
+```
+
+----
+
 # 📌 Key Concepts Used
 
 - RESTful API Design
