@@ -44,7 +44,11 @@ public class BookingMapper {
                         .stream()
                         .map(bookingSeat -> bookingSeat.getShowSeat().getSeat().getSeatNumber())
                         .toList())
-                .paymentStatus(booking.getPayment().getPaymentStatus())
+                 .paymentStatus(
+                        booking.getPayment() != null
+                                ? booking.getPayment().getPaymentStatus()
+                                : "PENDING"
+                )
                 .build();
 
 
